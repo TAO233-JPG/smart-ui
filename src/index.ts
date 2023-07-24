@@ -1,7 +1,10 @@
 import { createApp } from "vue";
-
 import SButton from "./button/index";
-import SFCButton from "./SFCButton.vue"
+import SFCButton from "./SFCButton.vue";
 import sfcButton from "./jsxButton";
 
-createApp(sfcButton).mount("#app");
+import SmartyUI from "./entry";
+
+
+createApp(SButton)
+  .mount("#app");
