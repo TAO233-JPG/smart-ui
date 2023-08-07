@@ -90,7 +90,7 @@ export default defineComponent({
         {props.icon !== "" ? (
           <i class={`i-ic-baseline-${props.icon} p-3`}></i>
         ) : null}
-        {slots.default ? slots.default() : "22"}{" "}
+        {slots.default ? slots.default() : ""}{" "}
       </button>
     );
   },
@@ -104,5 +104,7 @@ const getHoverBgColor = (plain: boolean) => {
 };
 
 const getColor = (type: IType) => {
+  console.log(typeToColorMap.get(type), 'type---', type);
+  
   return typeToColorMap.get(type);
 };
