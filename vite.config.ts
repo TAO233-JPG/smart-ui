@@ -4,6 +4,13 @@ import Unocss from "./config/unocss";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 
+import type { InlineConfig } from "vitest";
+import type { UserConfig } from "vite";
+
+interface VitestConfigExport extends UserConfig {
+  test: InlineConfig;
+}
+
 const rollupOptions = {
   external: ["vue", "vue-router"],
   output: {
@@ -12,13 +19,9 @@ const rollupOptions = {
     },
   },
 };
-
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    Unocss(),
-    vue(),
-    vueJsx(),
-  ],
+  plugins: [Unocss(), vue(), vueJsx()],
   build: {
     rollupOptions,
     minify: false,
@@ -29,4 +32,11 @@ export default defineConfig({
       formats: ["es", "iife", "umd"],
     },
   },
-});
+  test: {
+    globals: true,
+    environment: "jsdom",
+    transformMode: {
+      web: [/.[tj]sx$/],
+    },
+  },
+} as VitestConfigExport);
