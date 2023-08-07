@@ -1,3 +1,5 @@
+import { demoblockPlugin } from "vitepress-theme-demoblock";
+
 export default {
   themeConfig: {
     // siteTitle: "SmartUI",
@@ -40,6 +42,16 @@ export default {
           link: "/xx",
         },
       ],
+    },
+  },
+
+  markdown: {
+    theme: { light: "github-light", dark: "github-dark" },
+    config: (md) => {
+      // 添加DemoBlock插槽
+      md.use(demoblockPlugin, {
+        customClass: "demoblock-custom",
+      });
     },
   },
 };

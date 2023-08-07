@@ -2,15 +2,17 @@
   "name": "smarty-ui-vite",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npx only-allow pnpm",
     "dev": "vite",
     "build": "vite build",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:dev": "pnpm run register:components && vitepress dev docs",
+    "docs:build": "pnpm run register:components && vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "register:components": "vitepress-rc"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +24,8 @@
     "@vitejs/plugin-vue-jsx": "2.0.0",
     "unocss": "^0.53.6",
     "vite": "3.0.7",
-    "vitepress": "1.0.0-beta.7"
+    "vitepress": "1.0.0-beta.7",
+    "vitepress-theme-demoblock": "^3.0.3"
   },
   "dependencies": {
     "vue": "^3.3.4"

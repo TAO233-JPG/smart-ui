@@ -1,6 +1,9 @@
 import { defineConfig } from "vite";
+import { demoblockVitePlugin } from "vitepress-theme-demoblock";
+
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import Unocss from "../config/unocss";
+
 // https://vitejs.dev/config/
 
 export default defineConfig({
@@ -8,5 +11,6 @@ export default defineConfig({
     // 添加JSX插件
     Unocss(),
     vueJsx(),
+    demoblockVitePlugin(),
   ],
 });
