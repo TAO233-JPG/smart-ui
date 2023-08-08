@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest --coverage",
+    "test:run": "vitest run",
     "test:ui": "vitest --ui --coverage",
     "preinstall": "npx only-allow pnpm",
     "dev": "vite",
@@ -15,7 +16,8 @@
     "docs:serve": "vitepress serve docs",
     "register:components": "vitepress-rc",
     "lint": "eslint --fix --ext .ts,.vue,.tsx  src",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.vue\""
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.vue\"",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -41,6 +43,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.16.1",
+    "husky": "^8.0.3",
     "jsdom": "^22.1.0",
     "prettier": "^3.0.1",
     "typescript": "*",
