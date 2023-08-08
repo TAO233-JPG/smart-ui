@@ -23,6 +23,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "17.0.2",
+    "@commitlint/config-conventional": "17.0.2",
     "@iconify-json/ic": "^1.1.13",
     "@types/node": "^20.4.6",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
