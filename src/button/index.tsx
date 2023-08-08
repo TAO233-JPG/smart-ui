@@ -104,7 +104,7 @@ const getHoverBgColor = (plain: boolean) => {
 };
 
 const getColor = (type: IType) => {
-  console.log(typeToColorMap.get(type), 'type---', type);
-  
+  console.log(typeToColorMap.get(type), "type---", type);
+
   return typeToColorMap.get(type);
 };

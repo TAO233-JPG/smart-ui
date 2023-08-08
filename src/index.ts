@@ -5,6 +5,4 @@ import sfcButton from "./jsxButton";
 
 import SmartyUI from "./entry";
 
-
-createApp(SButton)
-  .mount("#app");
+createApp(SButton).mount("#app");

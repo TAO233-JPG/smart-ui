@@ -2,7 +2,6 @@ import Button from "../index";
 
 import { shallowMount } from "@vue/test-utils";
 import { describe, expect, test } from "vitest";
-import { props } from "../index";
 // 测试分组
 describe("Button", () => {
   // mount
@@ -30,7 +29,7 @@ describe("type", () => {
       wrapper
         .classes()
         .map((v) => v.replace("\n", ""))
-        .includes("bg-blue-500")
+        .includes("bg-blue-500"),
     ).toBe(true);
   });
   test("danger", () => {
@@ -46,7 +45,7 @@ describe("type", () => {
       wrapper
         .classes()
         .map((v) => v.replace("\n", ""))
-        .includes("bg-red-500")
+        .includes("bg-red-500"),
     ).toBe(true);
   });
 });
@@ -64,7 +63,7 @@ describe("plain", () => {
       wrapper
         .classes()
         .map((v) => v.replace("\n", ""))
-        .includes("500")
+        .includes("500"),
     );
   });
   test("plain", () => {
@@ -73,7 +72,7 @@ describe("plain", () => {
         default: "Button",
       },
       props: {
-        plain: true
+        plain: true,
       },
     });
 
@@ -81,7 +80,7 @@ describe("plain", () => {
       wrapper
         .classes()
         .map((v) => v.replace("\n", ""))
-        .includes("400")
+        .includes("400"),
     );
   });
 });
