@@ -12,11 +12,12 @@ interface VitestConfigExport extends UserConfig {
 }
 
 const rollupOptions = {
-  external: ["vue", "vue-router"],
+  external: ["vue"],
   output: {
     globals: {
       vue: "Vue",
     },
+    exports: "named",
   },
 };
 // https://vitejs.dev/config/
@@ -25,10 +26,13 @@ export default defineConfig({
   build: {
     rollupOptions,
     minify: false,
+    sourcemap: true,
+    brotliSize: true, // 生成压缩大小报告
+    // cssCodeSplit: true,
     lib: {
       entry: "./src/entry.ts",
       name: "SmartUI",
-      fileName: "smarty-ui",
+      fileName: "smart-ui",
       formats: ["es", "iife", "umd"],
     },
   },
