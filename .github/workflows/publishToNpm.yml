@@ -19,12 +19,13 @@ jobs:
           version: 6.31.0
       - name: Install modules
         run: pnpm install
+        
       - name: Build
         run: pnpm run build
+        
       - name: "Publish to the npm registry"
-        uses: primer/publish@master
+        run: |
+          npm config set //registry.npmjs.org/:_authToken=$NPM_AUTH_TOKEN
+          npm publish
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_AUTH_TOKEN: ${{ secrets.npm_auth_token }} # 跟前面步骤中的 NPM_AUTH_TOKEN 保持一致
-        with:
-          default_branch: "publish"
