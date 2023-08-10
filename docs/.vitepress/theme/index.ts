@@ -4,7 +4,7 @@ import DefaultTheme from "vitepress/theme";
 import 'vitepress-theme-demoblock/dist/theme/styles/index.css'
 import { useComponents } from "./useComponents";
 
-import smartyUI from "../../../src/entry";
+import smartUI from "../../../src/entry";
 
 
 export default {
@@ -15,6 +15,6 @@ export default {
     // app is the Vue 3 app instance from `createApp()`. router is VitePress'
     // custom router. `siteData`` is a `ref`` of current site-level metadata.
     useComponents(app);
-    app.use(smartyUI);
+    app.use(smartUI);
   },
 };
