@@ -10,7 +10,10 @@ jobs:
     name: "publish npm"
     environment: npm
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout
+         with:
+          ref: publish
+    
       - uses: pnpm/action-setup@v2.1.0
         with:
           version: 6.31.0
@@ -22,9 +25,9 @@ jobs:
         run: pnpm run build
 
       - name: "Publish to the npm registry"
-        uses: primer/publish@3.0.0
+        uses: primer/publish
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_AUTH_TOKEN: ${{ secrets.npm_auth_token }} # 跟前面步骤中的 NPM_AUTH_TOKEN 保持一致
         with:
           default_branch: "publish"
