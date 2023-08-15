@@ -1,6 +1,7 @@
 import { demoblockPlugin } from "vitepress-theme-demoblock";
 
 export default {
+  base: "/smart-ui-vite/",
   themeConfig: {
     // siteTitle: "SmartUI",
     siteTitle: false,
