@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest --coverage",
-    "test:run": "vitest run",
+    "test:run": "vitest run --coverage",
     "test:ui": "vitest --ui --coverage",
     "preinstall": "npx only-allow pnpm",
     "dev": "vite",
@@ -31,6 +31,7 @@
     "@typescript-eslint/parser": "^6.3.0",
     "@vitejs/plugin-vue": "3.0.3",
     "@vitejs/plugin-vue-jsx": "2.0.0",
+    "@vitest/coverage-istanbul": "^0.34.1",
     "@vitest/coverage-v8": "^0.34.1",
     "@vitest/ui": "^0.34.1",
     "@vue/eslint-config-prettier": "^8.0.0",
