@@ -2,6 +2,9 @@
 
 <p align="center">
     <a href="https://github.com/TAO233-JPG/smart-ui/actions/workflows/master.yml"><img src="https://github.com/TAO233-JPG/smart-ui/actions/workflows/master.yml/badge.svg?branch=master" alt="CI" style="max-width: 100%;"></a>
+    <a href="https://codecov.io/github/TAO233-JPG/smart-ui" > 
+    <img src="https://codecov.io/github/TAO233-JPG/smart-ui/branch/master/graph/badge.svg?token=V24SCXDJFB"/> 
+    </a>
 </p>
 
 ## 规范
