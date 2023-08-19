@@ -1,10 +1,11 @@
 {
   "name": "smart-ui-tao",
   "version": "0.1.2",
-  "description": "",
+  "description": "Vue3组件库, 仅供学习",
   "type": "module",
   "main": "dist/smart-ui.umd.cjs",
   "module": "dist/smart-ui.js",
+  "homepage": "https://tao233-jpg.github.io/smart-ui/",
   "scripts": {
     "test": "vitest --coverage",
     "test:run": "vitest run --coverage",
@@ -20,7 +21,14 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"src/**/*.vue\"",
     "prepare": "husky install"
   },
-  "keywords": [],
+  "keywords": [
+    "smart-ui",
+    "smart-ui-tao",
+    "vue",
+    "ui",
+    "components",
+    "typescript"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
