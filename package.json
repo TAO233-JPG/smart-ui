@@ -3,7 +3,8 @@
   "version": "0.1.2",
   "description": "",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/smart-ui.umd.cjs",
+  "module": "dist/smart-ui.js",
   "scripts": {
     "test": "vitest --coverage",
     "test:run": "vitest run --coverage",
@@ -52,6 +53,7 @@
     "typescript": "*",
     "unocss": "^0.53.6",
     "vite": "3.0.7",
+    "vite-plugin-dts": "^3.5.2",
     "vitepress": "1.0.0-beta.7",
     "vitepress-theme-demoblock": "^3.0.3",
     "vitest": "^0.34.1"
