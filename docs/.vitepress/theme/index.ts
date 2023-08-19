@@ -1,11 +1,11 @@
 import DefaultTheme from "vitepress/theme";
 
 // 主题样式
-import 'vitepress-theme-demoblock/dist/theme/styles/index.css'
+import "vitepress-theme-demoblock/dist/theme/styles/index.css";
+import "./style.css";
 import { useComponents } from "./useComponents";
 
 import smartUI from "../../../src/entry";
-
 
 export default {
   ...DefaultTheme,

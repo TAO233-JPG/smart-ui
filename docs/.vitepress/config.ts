@@ -1,20 +1,23 @@
+import { defineConfig } from "vitepress";
 import { demoblockPlugin } from "vitepress-theme-demoblock";
 
-export default {
+export default defineConfig({
   base: "/smart-ui/",
+  lang: "zh-CN",
+  title: "Vue3 UI 框架",
+  titleTemplate: "Smart-UI",
+
+  head: [['link', { rel: 'icon', href: '/logo.ico' }]],
+
   themeConfig: {
-    // siteTitle: "SmartUI",
-    siteTitle: false,
-    // logo: "/logo.png",
-    logo: "https://element-plus.org/images/element-plus-logo.svg",
+    siteTitle: "Smart-UI",
+    logo: "/logo.png",
     nav: [
       { text: "指南", link: "/guild/installation" },
       { text: "组件", link: "/components/button/" },
     ],
-    socialLinks: [{ icon: "github", link: "https://gitee.com/geeksdidi" }],
+    socialLinks: [{ icon: "github", link: "https://github.com/TAO233-JPG/smart-ui" }],
     sidebar: {
-      logo: "/logo.png",
-      alt: "33",
       "/components/": [
         {
           text: "基础",
@@ -55,4 +58,4 @@ export default {
       });
     },
   },
-};
+});

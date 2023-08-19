@@ -1,7 +1,7 @@
 ---
 layout: home
 
-title: SmartUI
+title: Smart-UI
 titleTemplate: 一个Vue3组件库
 
 hero:
@@ -16,8 +16,8 @@ hero:
       text: 开始
       link: /components/installation/
     - theme: alt
-      text: 在 Gitee 上查看
-      link: https://gitee.com/geeksdidi/kittyui
+      text: 在 GitHub 上查看
+      link: https://github.com/TAO233-JPG/smart-ui
 
 features:
   - icon: 💡
