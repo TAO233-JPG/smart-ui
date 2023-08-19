@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import Unocss from "./config/unocss";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
+import dts from "vite-plugin-dts";
 
 import type { InlineConfig } from "vitest";
 import type { UserConfig } from "vite";
@@ -22,7 +23,18 @@ const rollupOptions = {
 };
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [Unocss(), vue(), vueJsx()],
+  plugins: [
+    Unocss(),
+    vue(),
+    vueJsx(),
+    dts({
+      outDir: "./dist/types",
+      insertTypesEntry: false,
+      copyDtsFiles: true,
+      // rollupTypes: true,
+      exclude: ["**/__test__/**", "node_module/**"],
+    }),
+  ],
   build: {
     rollupOptions,
     minify: false,
