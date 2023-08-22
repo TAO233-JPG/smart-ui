@@ -12,5 +12,6 @@
       "node_modules"
   ],
   "esModuleInterop": true,
+  "allowImportingTsExtensions": true,
   "allowSyntheticDefaultImports": "true"
 }
