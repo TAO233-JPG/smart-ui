@@ -38,6 +38,7 @@
     "@types/node": "^20.4.6",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^6.3.0",
+    "@unocss/preset-rem-to-px": "^0.55.2",
     "@vitejs/plugin-vue": "3.0.3",
     "@vitejs/plugin-vue-jsx": "2.0.0",
     "@vitest/coverage-istanbul": "^0.34.1",
@@ -67,6 +68,7 @@
     "vitest": "^0.34.1"
   },
   "dependencies": {
+    "sass": "^1.66.1",
     "vue": "^3.3.4"
   }
 }

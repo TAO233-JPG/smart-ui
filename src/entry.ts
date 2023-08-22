@@ -1,4 +1,7 @@
 import { App } from "vue";
+
+import "../theme/index.scss";
+
 import SButton from "./button";
 import SFCButton from "./SFCButton.vue";
 import JsxButton from "./jsxButton";
