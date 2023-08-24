@@ -1,7 +1,8 @@
+import "./src/font/iconfont";
 import SIcon from "./src/Icon.vue";
 
-export * from "./src/interface";
-
 export type IconInstance = InstanceType<typeof SIcon>;
+
+export * from "./src/interface";
 
 export default SIcon;

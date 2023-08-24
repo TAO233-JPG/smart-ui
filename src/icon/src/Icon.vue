@@ -1,6 +1,6 @@
 <template>
   <span class="s-icon">
-    <svg class="s-icon-svg" aria-hidden="true" :style="{...styles}">
+    <svg class="s-icon-svg" aria-hidden="true" :style="{ ...styles }">
       <use :xlink:href="iconName"></use>
     </svg>
     <div v-if="dot" class="s-icon-info" :class="styleDot">
@@ -8,9 +8,7 @@
     </div>
   </span>
 </template>
-
 <script setup lang="ts">
-import "./font/iconfont.js";
 import { Props, useIcon } from "./props";
 import { computed } from "vue";
 
