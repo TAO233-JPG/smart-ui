@@ -1,7 +1,7 @@
 import { mount } from "@vue/test-utils";
 import { describe, expect, test } from "vitest";
 import SIcon from "../src/Icon.vue";
-import { transformColorHexToRGB } from "../../utils/test";
+import { transformColorHexToRGB } from "../../utils/helper";
 
 describe("SIcon", () => {
   test("default", () => {
