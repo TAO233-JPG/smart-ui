@@ -5,8 +5,6 @@ import "vitepress-theme-demoblock/dist/theme/styles/index.css";
 import "./style.css";
 import { useComponents } from "./useComponents";
 
-import smartUI from "../../../src/entry";
-
 export default {
   ...DefaultTheme,
   enhanceApp: async ({ app, router, siteData }) => {
@@ -15,6 +13,12 @@ export default {
     // app is the Vue 3 app instance from `createApp()`. router is VitePress'
     // custom router. `siteData`` is a `ref`` of current site-level metadata.
     useComponents(app);
-    app.use(smartUI);
+    app.mixin({
+      async mounted() {
+        import("../../../src/entry").then((SmartUI) => {
+          app.use(SmartUI);
+        });
+      },
+    });
   },
 };
