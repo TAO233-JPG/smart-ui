@@ -4,21 +4,21 @@ import DefaultTheme from "vitepress/theme";
 import "vitepress-theme-demoblock/dist/theme/styles/index.css";
 import "./style.css";
 import { useComponents } from "./useComponents";
+import { EnhanceAppContext } from "vitepress";
 
 export default {
   ...DefaultTheme,
-  enhanceApp: async ({ app, router, siteData }) => {
+  enhanceApp: async (ctx: EnhanceAppContext) => {
     // app.component("Demo", Demo);
     // app.component("DemoBlock", DemoBlock);
     // app is the Vue 3 app instance from `createApp()`. router is VitePress'
     // custom router. `siteData`` is a `ref`` of current site-level metadata.
+    const { app, router, siteData } = ctx;
     useComponents(app);
-    app.mixin({
-      async mounted() {
-        import("../../../src/entry").then((SmartUI) => {
-          app.use(SmartUI);
-        });
-      },
-    });
+
+    if (!import.meta.env.SSR) {
+      const SmartUI = await import("../../../src/entry");
+      app.use(SmartUI.default);
+    }
   },
 };
