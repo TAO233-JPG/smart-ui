@@ -19,3 +19,7 @@ export const transformColorHexToRGB = (color: string) => {
   }
   return color;
 };
+
+export const setUnit = (size: string | number, unit: string = "px") => {
+  return typeof size === "string" ? size : size + unit;
+};
