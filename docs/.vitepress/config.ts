@@ -42,7 +42,11 @@ export default defineConfig({
             {
               text: "图标",
               link: "/components/icon/"
-            }
+            },
+            {
+              text: "布局",
+              link: "/components/container/"
+            },
           ],
         },
         {
