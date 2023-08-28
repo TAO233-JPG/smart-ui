@@ -3,7 +3,7 @@ import { ExtractPropTypes } from "vue";
 export const Props = {
   width: {
     type: [String, Number],
-    default: "200px",
+    default: "200",
   },
 };
 

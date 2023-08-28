@@ -21,5 +21,5 @@ export const transformColorHexToRGB = (color: string) => {
 };
 
 export const setUnit = (size: string | number, unit: string = "px") => {
-  return typeof size === "string" ? size : size + unit;
+  return size + unit;
 };

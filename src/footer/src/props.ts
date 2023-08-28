@@ -2,7 +2,7 @@ import { ExtractPropTypes } from "vue";
 export const Props = {
   height: {
     type: [Number, String],
-    default: "60px",
+    default: "60",
   },
   padding: {
     type: [Number, String],
