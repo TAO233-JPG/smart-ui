@@ -7,7 +7,7 @@ export default defineConfig({
   title: "Vue3 UI 框架",
   titleTemplate: "Smart-UI",
 
-  head: [['link', { rel: 'icon', href: '/logo.ico' }]],
+  head: [["link", { rel: "icon", href: "/logo.ico" }]],
 
   themeConfig: {
     siteTitle: "Smart-UI",
@@ -16,7 +16,9 @@ export default defineConfig({
       { text: "指南", link: "/guild/installation" },
       { text: "组件", link: "/components/button/" },
     ],
-    socialLinks: [{ icon: "github", link: "https://github.com/TAO233-JPG/smart-ui" }],
+    socialLinks: [
+      { icon: "github", link: "https://github.com/TAO233-JPG/smart-ui" },
+    ],
     sidebar: {
       "/components/": [
         {
@@ -41,11 +43,15 @@ export default defineConfig({
             },
             {
               text: "图标",
-              link: "/components/icon/"
+              link: "/components/icon/",
             },
             {
               text: "布局",
-              link: "/components/container/"
+              link: "/components/container/",
+            },
+            {
+              text: "对话框",
+              link: "/components/modal/",
             },
           ],
         },
@@ -64,6 +70,11 @@ export default defineConfig({
       md.use(demoblockPlugin, {
         customClass: "demoblock-custom",
       });
+    },
+  },
+  vue: {
+    script: {
+      defineModel: true,
     },
   },
 });
