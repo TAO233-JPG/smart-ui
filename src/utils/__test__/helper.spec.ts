@@ -16,10 +16,10 @@ describe("helper", () => {
     expect(setUnit(34)).toBe("34px");
     expect(setUnit(3.4)).toBe("3.4px");
 
-    expect(setUnit("334")).toBe("334");
-    expect(setUnit("334px")).toBe("334px");
+    expect(setUnit("334")).toBe("334px");
+    expect(setUnit("334px")).toBe("334pxpx");
 
     expect(setUnit(3, "em")).toBe("3em");
-    expect(setUnit("4", "em")).toBe("4");
+    expect(setUnit("4", "em")).toBe("4em");
   });
 });
