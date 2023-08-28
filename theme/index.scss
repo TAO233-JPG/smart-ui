@@ -1,3 +1,5 @@
+@use "./config/reset";
+
 @use './src/button.scss';
 
 @use './src/icon.scss';
@@ -7,3 +9,5 @@
 @use './src/aside.scss';
 @use './src/main.scss';
 @use './src/footer.scss';
+
+@use './src/modal.scss';
