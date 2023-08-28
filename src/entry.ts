@@ -15,6 +15,9 @@ import SFooter from "./footer";
 
 import SModal from "./modal";
 
+import STabs from "./tabs";
+import STabsItem from "./tabs-item";
+
 // 单独导出组件
 export {
   SButton,
@@ -27,6 +30,8 @@ export {
   SAsdie,
   SFooter,
   SModal,
+  STabs,
+  STabsItem,
 };
 
 // 插件，导出所有组件
@@ -41,6 +46,9 @@ export default {
     app.component(SFooter.name, SFooter);
 
     app.component(SModal.name, SModal);
+
+    app.component(STabs.name, STabs);
+    app.component(STabsItem.name, STabsItem);
 
     app.component(SFCButton.name, SFCButton);
     app.component(JsxButton.name, JsxButton);
