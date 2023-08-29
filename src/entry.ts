@@ -20,6 +20,8 @@ import STabsItem from "./tabs-item";
 
 import SSwitch from "./switch";
 
+import SInput from "./input";
+
 // 单独导出组件
 export {
   SButton,
@@ -35,6 +37,7 @@ export {
   STabs,
   STabsItem,
   SSwitch,
+  SInput,
 };
 
 // 插件，导出所有组件
@@ -54,6 +57,7 @@ export default {
     app.component(STabsItem.name, STabsItem);
 
     app.component(SSwitch.name, SSwitch);
+    app.component(SInput.name, SInput);
 
     app.component(SFCButton.name, SFCButton);
     app.component(JsxButton.name, JsxButton);

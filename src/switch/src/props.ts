@@ -2,6 +2,10 @@ import { ExtractPropTypes, PropType } from "vue";
 import { SwitchSize } from "./interface";
 
 export const Props = {
+  modelValue: {
+    type: Boolean,
+    default: false,
+  },
   size: {
     type: String as PropType<SwitchSize>,
     default: "middle",
