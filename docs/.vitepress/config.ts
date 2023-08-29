@@ -53,6 +53,10 @@ export default defineConfig({
               text: "对话框",
               link: "/components/modal/",
             },
+            {
+              text: "Tabs 选项卡",
+              link: '/components/tabs/'
+            },
           ],
         },
         {
