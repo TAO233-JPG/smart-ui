@@ -57,6 +57,10 @@ export default defineConfig({
               text: "Tabs 选项卡",
               link: '/components/tabs/'
             },
+            {
+              text: "Switch 开关",
+              link: '/components/switch/'
+            },
           ],
         },
         {

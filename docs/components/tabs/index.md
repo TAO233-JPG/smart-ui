@@ -79,7 +79,7 @@ const curTab = ref("user");
 .content {
   padding: 20px;
 }
-</>
+</style>
 ```
 
 :::
