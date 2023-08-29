@@ -18,6 +18,8 @@ import SModal from "./modal";
 import STabs from "./tabs";
 import STabsItem from "./tabs-item";
 
+import SSwitch from "./switch";
+
 // 单独导出组件
 export {
   SButton,
@@ -32,6 +34,7 @@ export {
   SModal,
   STabs,
   STabsItem,
+  SSwitch,
 };
 
 // 插件，导出所有组件
@@ -49,6 +52,8 @@ export default {
 
     app.component(STabs.name, STabs);
     app.component(STabsItem.name, STabsItem);
+
+    app.component(SSwitch.name, SSwitch);
 
     app.component(SFCButton.name, SFCButton);
     app.component(JsxButton.name, JsxButton);

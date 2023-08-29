@@ -1,0 +1,93 @@
+@import '../config/var-switch';
+
+.s-switch {
+  user-select    : none;
+  display        : inline-flex;
+  justify-content: center;
+  align-items    : center;
+  cursor         : pointer;
+  vertical-align : middle;
+
+  &__input {
+    position        : relative;
+    display         : inline-flex;
+    border-radius   : 30px;
+    z-index         : 5;
+    transition      : 0.2s;
+    background-color: var(--switch-close-color, #bbbbbb);
+    height          : calc(var(--switch-height) - 10px);
+    width           : calc((var(--switch-height) - 10px) * 2);
+
+    // 小球
+    .s-switch__roll {
+      display         : inline-flex;
+      justify-content : center;
+      align-items     : center;
+      height          : calc(var(--switch-height) - 10px - 4px);
+      width           : calc((var(--switch-height) - 10px - 4px));
+      border-radius   : 50%;
+      transform       : translateX(0);
+      z-index         : 10;
+      transition      : 0.2s;
+      box-sizing      : content-box;
+      box-shadow      : 0 2px 3px #00000021, 0 0 4px #0000000d;
+      border          : 2px solid var(--switch-close-color, #bbbbbb);
+      background-color: #fff;
+
+      // 小球的位置
+      &.s-switch__roll-active {
+        transform: translateX(calc(var(--switch-height) - 10px));
+      }
+
+      .f-svg-icon {
+        transition: color 0.2s;
+        font-size : var(--switch-font-size);
+        color     : var(--switch-close-color, #bbbbbb);
+      }
+
+      .s-switch__loading-animation {
+        animation: s-switch-loading-animation 1s linear infinite;
+      }
+
+      // loading 动画
+      @keyframes s-switch-loading-animation {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+
+    // 选中状态
+    &.s-switch__active {
+      background-color: var(--switch-active-color, #2d5af1);
+
+      // 选中状态的小球
+      .s-switch__roll {
+        border: 2px solid var(--switch-active-color, #2d5af1);
+
+        .s-svg-icon {
+          color: var(--switch-active-color, #2d5af1);
+        }
+      }
+    }
+
+    // 方形的
+    &.s-switch__square {
+      border-radius: 0;
+
+      .s-switch__roll {
+        border-radius: 0;
+      }
+    }
+  }
+
+  // 禁用状态
+  &.s-switch__disabled {
+    opacity: 0.5;
+    cursor : not-allowed;
+  }
+}

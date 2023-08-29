@@ -16,3 +16,4 @@ export const useStyles = <T extends Record<string, any>>(
 
   return styles as unknown as CSSProperties;
 };
+
