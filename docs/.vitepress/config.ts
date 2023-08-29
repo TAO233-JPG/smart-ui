@@ -55,11 +55,15 @@ export default defineConfig({
             },
             {
               text: "Tabs 选项卡",
-              link: '/components/tabs/'
+              link: "/components/tabs/",
             },
             {
               text: "Switch 开关",
-              link: '/components/switch/'
+              link: "/components/switch/",
+            },
+            {
+              text: "input 输入框",
+              link: "/components/input/",
             },
           ],
         },
