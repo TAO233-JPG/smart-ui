@@ -65,6 +65,14 @@ export default defineConfig({
               text: "input 输入框",
               link: "/components/input/",
             },
+            {
+              text: "select 选择器",
+              link: "/components/select/",
+            },
+            {
+              text: "trigger 触发器",
+              link: "/components/trigger/",
+            },
           ],
         },
         {
