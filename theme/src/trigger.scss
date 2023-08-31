@@ -1,0 +1,17 @@
+.s-trigger {
+  display: inline-flex;
+  &__trigger {}
+
+  &__disabled {
+    opacity: .6;
+    cursor : not-allowed;
+  }
+
+  &__content {
+    position      : absolute;
+    top           : var(--trigger-top, 0px);
+    left          : var(--trigger-left, 0px);
+    pointer-events: none;
+    z-index       : 2000;
+  }
+}
