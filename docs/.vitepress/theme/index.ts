@@ -1,10 +1,11 @@
 import DefaultTheme from "vitepress/theme";
-
 // 主题样式
 import "vitepress-theme-demoblock/dist/theme/styles/index.css";
 import "./style.css";
 import { useComponents } from "./useComponents";
 import { EnhanceAppContext } from "vitepress";
+
+import "../../../theme/index.scss";
 
 export default {
   ...DefaultTheme,
