@@ -13,27 +13,20 @@ export default defineConfig({
     siteTitle: "Smart-UI",
     logo: "/logo.png",
     nav: [
-      { text: "指南", link: "/guild/installation" },
+      { text: "指南", link: "/guide/quickstart/" },
       { text: "组件", link: "/components/button/" },
     ],
     socialLinks: [
       { icon: "github", link: "https://github.com/TAO233-JPG/smart-ui" },
     ],
     sidebar: {
-      "/components/": [
+      "/guide/": [
         {
-          text: "基础",
-          items: [
-            {
-              text: "安装",
-              link: "/components/installation/",
-            },
-            {
-              text: "快速开始",
-              link: "/components/quickstart/",
-            },
-          ],
+          text: "快速开始",
+          link: "/guide/quickstart/"
         },
+      ],
+      "/components/": [
         {
           text: "基础组件",
           items: [
@@ -78,10 +71,6 @@ export default defineConfig({
               link: "/components/tooltip/",
             },
           ],
-        },
-        {
-          text: "进阶",
-          link: "/xx",
         },
       ],
     },
