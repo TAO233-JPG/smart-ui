@@ -13,24 +13,44 @@ interface VitestConfigExport extends UserConfig {
 
 const rollupOptions = {
   external: ["vue"],
-  output: {
-    globals: {
-      vue: "Vue",
+  output: [
+    {
+      //打包格式
+      format: "es",
+      //打包后文件名
+      entryFileNames: "[name].js",
+      //让打包目录和我们目录对应
+      preserveModules: true,
+      exports: "named",
+      //配置打包根目录
+      dir: "./dist/es",
     },
-    exports: "named",
-  },
+    {
+      //打包格式
+      format: "cjs",
+      //打包后文件名
+      entryFileNames: "[name].js",
+      //让打包目录和我们目录对应
+      preserveModules: true,
+      exports: "named",
+      //配置打包根目录
+      dir: "./dist/cjs",
+    },
+  ],
 };
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      script: {
+        defineModel: true,
+      },
+    }),
     vueJsx(),
     dts({
-      outDir: "./dist/types",
-      insertTypesEntry: false,
-      copyDtsFiles: true,
-      // rollupTypes: true,
-      exclude: ["**/__test__/**", "node_module/**"],
+      entryRoot: "./src",
+      outDir: ["./dist/es", "./dist/cjs"],
+      insertTypesEntry: true,
     }),
   ],
   build: {
@@ -41,9 +61,7 @@ export default defineConfig({
     // cssCodeSplit: true,
     lib: {
       entry: "./src/entry.ts",
-      name: "SmartUI",
-      fileName: "smart-ui",
-      formats: ["es", "iife", "umd"],
+      name: "Smart-UI",
     },
   },
   test: {

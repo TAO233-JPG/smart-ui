@@ -1,0 +1,11 @@
+.s-container {
+  display       : flex;
+  flex          : 1;
+  flex-direction: row;
+  box-sizing    : border-box;
+  flex-basis    : auto;
+
+  &.s-container__vertical {
+    flex-direction: column;
+  }
+}

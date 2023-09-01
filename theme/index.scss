@@ -1,1 +1,26 @@
-@use './src/button.scss'
+@use "./config/reset";
+
+@use './src/button.scss';
+
+@use './src/icon.scss';
+
+@use './src/container.scss';
+@use './src/header.scss';
+@use './src/aside.scss';
+@use './src/main.scss';
+@use './src/footer.scss';
+
+@use './src/modal.scss';
+
+
+@use "./src/tabs.scss";
+@use "./src/tabsItem.scss";
+
+@use "./src/switch.scss";
+
+@use "./src/input.scss";
+@use "./src/select.scss";
+
+@use "./src/trigger.scss";
+
+@use "./src/tooltip.scss";

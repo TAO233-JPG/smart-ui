@@ -1,0 +1,130 @@
+.s-tooltip {
+  position: relative;
+  display : inline-block;
+  z-index : 600;
+
+  &::before,
+  &::after {
+    color     : #eee;
+    visibility: hidden;
+    opacity   : 0;
+    z-index   : 600;
+    transform : translate3d(0, 0, 0);
+    transition: all 0.3s ease 0.05s;
+  }
+
+  &::before {
+    content : '';
+    position: absolute;
+    width   : 0;
+    height  : 0;
+    border  : 6px solid transparent;
+  }
+
+  &::after {
+    position        : absolute;
+    content         : attr(content);
+    font-size       : 12px;
+    padding         : 0px 8px;
+    white-space     : nowrap;
+    border-radius   : 2px;
+    background-color: #333;
+
+  }
+
+
+  &.s-tooltip__hover:hover::before,
+  &.s-tooltip__hover:hover::after,
+  &.s-tooltip__active:active::before,
+  &.s-tooltip__active:active::after,
+  &.s-tooltip__always::before,
+  &.s-tooltip__always::after {
+    visibility: visible;
+    opacity   : 1;
+  }
+
+  /* after 位置 */
+  &.s-tooltip__top::after,
+  &.s-tooltip__bottom::after {
+    left: 50%;
+  }
+
+
+  &.s-tooltip__top::after {
+    bottom   : 100%;
+    transform: translate(-50%, -8px);
+  }
+
+  &.s-tooltip__bottom::after {
+    top      : 100%;
+    transform: translate(-50%, 8px);
+
+  }
+
+  &.s-tooltip__left::after,
+  &.s-tooltip__right::after {
+    top: 50%;
+  }
+
+
+  &.s-tooltip__left::after {
+    right    : 100%;
+    transform: translate(-10px, -50%);
+  }
+
+  &.s-tooltip__right::after {
+    left     : 100%;
+    transform: translate(10px, -50%);
+  }
+
+  /* 三角形 */
+  &.s-tooltip__top::before {
+    border-top-color: #333;
+  }
+
+  &.s-tooltip__right::before {
+    border-right-color: #333;
+  }
+
+  &.s-tooltip__bottom::before {
+    border-bottom-color: #333;
+  }
+
+  &.s-tooltip__left::before {
+    border-left-color: #333;
+  }
+
+  /* before 位置 */
+  &.s-tooltip__top::before,
+  &.s-tooltip__bottom::before {
+    left: 50%;
+  }
+
+
+  &.s-tooltip__top::before {
+    bottom   : 100%;
+    transform: translate(-50%, 4px);
+  }
+
+  &.s-tooltip__bottom::before {
+    top      : 100%;
+    transform: translate(-50%, -4px);
+
+  }
+
+  &.s-tooltip__left::before,
+  &.s-tooltip__right::before {
+    top: 50%;
+  }
+
+
+  &.s-tooltip__left::before {
+    right    : 100%;
+    transform: translate(2px, -50%);
+  }
+
+  &.s-tooltip__right::before {
+    left     : 100%;
+    transform: translate(-2px, -50%);
+  }
+}
