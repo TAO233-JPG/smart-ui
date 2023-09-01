@@ -1,6 +1,6 @@
 {
   "name": "smart-ui-tao",
-  "version": "0.3.2",
+  "version": "0.3.6",
   "description": "Vue3组件库, 仅供学习",
   "type": "module",
   "main": "dist/cjs/entry.js",
