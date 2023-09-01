@@ -24,6 +24,7 @@ import SInput from "./input";
 
 import SSelect from "./select";
 import STrigger from "./trigger";
+import STooltip from "./tooltip";
 
 // 单独导出组件
 export {
@@ -43,6 +44,7 @@ export {
   SInput,
   SSelect,
   STrigger,
+  STooltip,
 };
 
 // 插件，导出所有组件
@@ -65,6 +67,7 @@ export default {
     app.component(SInput.name, SInput);
     app.component(SSelect.name, SSelect);
     app.component(STrigger.name, STrigger);
+    app.component(STooltip.name, STooltip);
 
     app.component(SFCButton.name, SFCButton);
     app.component(JsxButton.name, JsxButton);

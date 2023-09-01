@@ -73,6 +73,10 @@ export default defineConfig({
               text: "trigger 触发器",
               link: "/components/trigger/",
             },
+            {
+              text: "tooltip 文字提示",
+              link: "/components/tooltip/",
+            },
           ],
         },
         {
