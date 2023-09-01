@@ -49,12 +49,8 @@ export default defineConfig({
     vueJsx(),
     dts({
       entryRoot: "./src",
-      outDir: ["./dist/es/src", "./dist/cjs/src"],
-      // insertTypesEntry: false,
-      // copyDtsFiles: true,
-      // rollupTypes: true,
-      tsconfigPath: "./tsconfig.json",
-      // exclude: ["**/__test__/**", "node_module/**"],
+      outDir: ["./dist/es", "./dist/cjs"],
+      insertTypesEntry: true,
     }),
   ],
   build: {
@@ -65,7 +61,7 @@ export default defineConfig({
     // cssCodeSplit: true,
     lib: {
       entry: "./src/entry.ts",
-      name:'Smart-UI'
+      name: "Smart-UI",
     },
   },
   test: {
