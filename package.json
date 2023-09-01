@@ -41,7 +41,7 @@
       "import": "./dist/es/entry.js",
       "require": "./dist/cjs/entry.js"
     },
-    "./*": "./*"
+    "./*": "./dist/*"
   },
   "license": "ISC",
   "devDependencies": {
